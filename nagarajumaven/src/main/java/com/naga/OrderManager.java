@@ -41,7 +41,7 @@ public class OrderManager {
 		}
 		if (anyHotFoodServiceChargeFlag) {
 			anyHotFoodServiceCharge = bill.multiply(BigDecimal.valueOf(0.2)).setScale(2, RoundingMode.HALF_UP);
-			if (BigDecimal.valueOf(20).compareTo(anyHotFoodServiceCharge) >= 0) {
+			if (BigDecimal.valueOf(20).compareTo(anyHotFoodServiceCharge) < 0) {
 				anyHotFoodServiceCharge = BigDecimal.valueOf(20);
 			}
 		}
